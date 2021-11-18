@@ -19,6 +19,8 @@ void main() {
 
 // extendsで親クラスStatelessWidgetを継承する。
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   // StatelessWidgetはbuild()メソッドを実装する必要がある。
   // @overrideは上書きを示すアノテーション。
   @override
@@ -55,7 +57,8 @@ class MyHomePage extends StatefulWidget {
 
   // StatefulWidgetはcreateState()メソッドでStateを返す。
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  //_MyHomePageState createState() => _MyHomePageState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
 // アプリの状態を表すのが State である。

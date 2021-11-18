@@ -18,7 +18,12 @@ class _MyPageState extends State{
       appBar: AppBar(title: Text("push button")),
       body: Center(child: Text("$_counter")),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        //onPressed: _incrementCounter,  // 関数コールにしても良い
+        onPressed: () {
+          setState(() {
+            _counter++;
+          });
+        },
       )
     );
   }
