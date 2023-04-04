@@ -1,5 +1,11 @@
 # Uncomment this line to define a global platform for your project
-# platform :ios, '9.0'
+# platform :ios, '11.0'
+platform :ios, '11.0'
+
+# 次の行追加、その根拠：https://gsoft.jp/cocoapods_trunk_error/
+# pod repo update コマンドで下記エラーが出たら、pod repo remove trunk をしてからやり直す
+# [!] CDN: trunk URL couldn't be downloaded: https://cdn.cocoapods.org/CocoaPods-version.yml Response: URL using bad/illegal format or missing URL
+source ‘https://github.com/CocoaPods/Specs.git’
 
 # CocoaPods analytics sends network stats synchronously affecting flutter build latency.
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
